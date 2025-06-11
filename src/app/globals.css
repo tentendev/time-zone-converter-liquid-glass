@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 220 14% 96%;
+  --foreground: 220 9% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 9% 9%;
+  --primary: 220 65% 55%;
+  --primary-foreground: 220 9% 96%;
+  --secondary: 220 14% 95%;
+  --secondary-foreground: 220 9% 9%;
+  --muted: 220 14% 95%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 220 14% 95%;
+  --accent-foreground: 220 9% 9%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 220 65% 55%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: 220 13% 6%;
+  --foreground: 220 9% 91%;
+  --card: 220 13% 8%;
+  --card-foreground: 220 9% 91%;
+  --primary: 220 65% 65%;
+  --primary-foreground: 220 9% 6%;
+  --secondary: 220 13% 10%;
+  --secondary-foreground: 220 9% 91%;
+  --muted: 220 13% 10%;
+  --muted-foreground: 220 9% 64%;
+  --accent: 220 13% 10%;
+  --accent-foreground: 220 9% 91%;
+  --border: 220 13% 15%;
+  --input: 220 13% 15%;
+  --ring: 220 65% 65%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: hsl(var(--border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism Background Patterns */
+.bg-gradient-glass {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+}
+
+.dark .bg-gradient-glass {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.02) 50%, 
+    rgba(255, 255, 255, 0.05) 100%);
 }
