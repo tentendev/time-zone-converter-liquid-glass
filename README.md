@@ -32,8 +32,8 @@ A modern, elegant time zone converter web application featuring Apple's Liquid G
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd tenten-ai-meeting-timezone
+   git clone https://github.com/tentendev/time-zone-converter-liquid-glass.git
+   cd time-zone-converter-liquid-glass
    ```
 
 2. **Install dependencies**
